@@ -369,6 +369,8 @@ Error message and password prompt
 
 <li>tutorial</li>
 
+<li>Update from Todolist 1.0.0</li>
+
 </ul>
 </p>
 
@@ -11583,7 +11585,7 @@ For learning plugin features, syntax, tutorial and examples see the plugin demo 
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Todolist Plugin]] [[Todolist Tutorial]] [[Image and Icons]]" title="$:/StoryList">
+<div list="[[Todolist Plugin]] [[Update from Todolist 1.0.0]] [[Todolist Tutorial]] [[Image and Icons]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200401153152691" list="$:/core/ui/ControlPanel/Settings/TiddlyWiki $:/core/ui/ControlPanel/Settings/CodeMirror $:/plugins/kookma/utility/ui/ControlPanel/Settings $:/plugins/kookma/shiraz/ui/ControlPanel/Settings $:/plugins/kookma/favorites/ui/ControlPanel/Settings $:/plugins/kookma/todolist/settings/internals" modified="20200401153218515" title="$:/tags/ControlPanel/SettingsTab" type="text/vnd.tiddlywiki">
@@ -12344,7 +12346,7 @@ src=&quot;&quot;&quot;&lt;&lt;todolist-ui caption:&quot;!! My Todo List&quot; ba
 : The caption is a wikitext here: `!! My Todo List`
 : Different macros from categories are used here, `fixme`, `horn`, `high`, and `normal`</pre>
 </div>
-<div created="20200312100349082" list="[[Todolist Plugin]] [[Plugin Kickstarter]] [[Todolist Tutorial]] [[Image and Icons]]" modified="20200331053806412" title="start" type="text/vnd.tiddlywiki">
+<div created="20200312100349082" list="[[Todolist Plugin]] [[Update from Todolist 1.0.0]] [[Todolist Tutorial]] [[Image and Icons]]" modified="20200405184600965" title="start" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
 <div created="20200331154756157" modified="20200331155231595" tags="" title="task-icon.svg" type="text/vnd.tiddlywiki">
@@ -12411,6 +12413,26 @@ src=&quot;&quot;&quot;&lt;&lt;todolist-ui caption:&quot;!! My Todo List&quot; ba
 </div>
 <div created="20200312103338667" list="Install History Acknowledgement References" modified="20200312103339710" title="tutorial" type="text/vnd.tiddlywiki">
 <pre></pre>
+</div>
+<div created="20200405184536366" modified="20200405185713477" tags="start" title="Update from Todolist 1.0.0" type="text/vnd.tiddlywiki">
+<pre>If you update from 1.0.0 to 1.2.x, follow the below instructions:
+
+Todolist uses some data and state tiddlers called internals to keep todo lists.
+
+* The old version (1.0.0) uses  `$:/plugins/kookma/todolist/data/` as prefix
+* The new version (1.2.x) uses  `$:/todolist/data` as prefix
+
+
+When update Todolist from 1.0.0 to 1.2.x, it actually does not delete the previous todo lists, but the new version does not shows the them.
+
+What you can do?
+Simply correct the prefix and they will appear in new version!
+
+To access the internals
+
+* old version: Open `$:/plugins/kookma/todolist/internals`
+* new version: Open $:/ControlPanel, Settings, and then Todolist tab
+</pre>
 </div>
 
 
