@@ -1,5 +1,5 @@
 created: 20190718070116654
-modified: 20200403111220820
+modified: 20200405054450296
 tags: $:/tags/Todolist/Macro
 title: $:/plugins/kookma/todolist/macros/draggable-list
 type: text/vnd.tiddlywiki
@@ -22,7 +22,10 @@ type: text/vnd.tiddlywiki
 \end
 
 \define droppable-actions()
+<!-- the $list checks to prvents drag items not listed in this Todolist -->
+<$list filter="[<targetTiddler>contains<actionTiddler>]" variable=ignore>
 <$action-listops $tiddler=<<targetTiddler>> $field="list" $subfilter="+[insertbefore:item<actionTiddler>]"/>
+</$list>
 \end
 
 \define xxdisp-empty-placeholder()

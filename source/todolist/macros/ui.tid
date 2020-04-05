@@ -1,5 +1,5 @@
 created: 20190715170739310
-modified: 20200403120148783
+modified: 20200405061046677
 tags: $:/tags/Macro
 title: $:/plugins/kookma/todolist/macros/ui
 type: text/vnd.tiddlywiki
@@ -38,9 +38,9 @@ $caption$
 -->
 
 <!-- display undone items -->
-<$list filter="[<stateTiddler>getindex[editview]!match[edit]]" variable=ignore 
-   emptyMessage=<<disp-list-in-edit-mode>> >
-   <$macrocall $name="draggable-list" targetTiddler=<<taskTiddler>> />
+<$list filter="[<stateTiddler>getindex[editview]match[edit]]" variable=ignore 
+   emptyMessage="""<$macrocall $name="draggable-list" targetTiddler=<<taskTiddler>> />""">
+	 <<disp-list-in-edit-mode>>
 </$list>
 
 <div style="height:0.2em"/>
