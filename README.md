@@ -7,4 +7,4 @@ It also supports drag and drop to re arrange tasks in the list
 # Demo site
 See for demo and instruction for isntalling the plugin
 
- https://github.com/kookma/TW-Todolist
+https://kookma.github.io/TW-Todolist/
