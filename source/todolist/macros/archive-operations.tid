@@ -1,13 +1,13 @@
 created: 20190719141644069
-modified: 20210422161832777
+modified: 20211107172538483
 tags: $:/tags/Todolist/Macro
 title: $:/plugins/kookma/todolist/macros/archive-operations
 type: text/vnd.tiddlywiki
 
-\define todolist-list-archived-items(nameSpace:"")
+\define todolist-list-archived-items(base:"")
 <$vars
- archiveTiddler="""$nameSpace$/archive"""
- priorityTiddler="""$nameSpace$/priority"""
+ archiveTiddler="""$(td-basePath)$/archive/$base$"""    
+ priorityTiddler="""$(td-basePath)$/priority/$base$"""
 >
 <$list filter="[<archiveTiddler>indexes[]!sort[]]" variable="item">
 <div class="kk-todolist-row">
@@ -37,10 +37,10 @@ type: text/vnd.tiddlywiki
 </$button>
 \end
 
-\define todolist-empty-archived-tiddler(nameSpace)
+\define todolist-empty-archived-tiddler(base)
 <$vars
- archiveTiddler="""$nameSpace$/archive"""
- priorityTiddler="""$nameSpace$/priority"""
+ archiveTiddler="""$(td-basePath)$/archive/$base$"""    
+ priorityTiddler="""$(td-basePath)$/priority/$base$"""
 >
 <$button class="tc-btn-invisible tc-tiddlylink" tooltip="Empty archive"> {{$:/core/images/delete-button}} Delete archive
 <$list filter="[<archiveTiddler>indexes[]!sort[]]" variable="item">

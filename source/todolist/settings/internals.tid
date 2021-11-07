@@ -1,6 +1,7 @@
-caption: Todolist
+caption: Todolist Internals
 created: 20190716171918410
-modified: 20210422161832904
+list-after: $:/core/ui/ControlPanel/Settings/TiddlyWiki
+modified: 20211107151024155
 tags: $:/tags/ControlPanel/SettingsTab
 title: $:/plugins/kookma/todolist/settings/internals
 type: text/vnd.tiddlywiki

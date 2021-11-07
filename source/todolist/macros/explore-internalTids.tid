@@ -1,19 +1,17 @@
 created: 20190719143452217
-modified: 20210422161832839
+modified: 20211107180017426
 title: $:/plugins/kookma/todolist/macros/explore-internalTids
 type: text/vnd.tiddlywiki
 
-\define todolist-fullbaseName() $(td-basePath)$$(baseName)$
-
 \define todolist-explore-data-tiddlers()
-
+\import $:/plugins/kookma/todolist/macros/confirm-delete
 ><b>Number of internal tiddlers found: <$count filter="[all[tiddlers+shadows]prefix<td-basePath>]" /></b><br>
 ><$macrocall $name="todolist-delete-all-tids" filter=<<dataTids>> />
 
 <h2> Todo lists</h2>
-<$list filter="[all[shadows+tiddlers]removeprefix<td-basePath>splitbefore[/]removesuffix[/]sort[]]" variable="baseName">
+<$list filter="[all[shadows+tiddlers]removeprefix<td-basePath>removeprefix[/state/]sort[]]" variable="baseName">
 
-<$set name=bsFilter value="[prefix<todolist-fullbaseName>sort[]]">
+<$set name=bsFilter value="[prefix<td-basePath>suffix<baseName>sort[]]">
 <h3><<todolist-delete-all-tids-baseName>> <<baseName>></h3>
 <blockquote>
 <$list filter=<<bsFilter>> variable="internalTid" emptyMessage="//No internal data tiddlers is found!//">
@@ -39,7 +37,9 @@ type: text/vnd.tiddlywiki
 
 \define todolist-delete-all-tids-baseName()
 <$button class="tc-btn-invisible tc-tiddlylink" tooltip="Delete all data tiddlers in this Todo list?"> {{$:/core/images/delete-button}}
+<$action-confirm $message="Delete all data tiddlers in this Todo list: $(baseName)$?">
  <$action-deletetiddler $filter=<<bsFilter>> />
+</$action-confirm> 
 </$button>
 \end
 

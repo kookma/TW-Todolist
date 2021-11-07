@@ -1,5 +1,5 @@
 created: 20190715170540482
-modified: 20210422161832767
+modified: 20211107165519251
 tags: $:/tags/Todolist/Macro
 title: $:/plugins/kookma/todolist/macros/add-task
 type: text/vnd.tiddlywiki
@@ -39,6 +39,7 @@ type: text/vnd.tiddlywiki
   <$macrocall $name="todolist-add-item-to-list" targetTiddler=<<taskTiddler>> item=<<item>> />
 	</$set>
 	<$action-setfield $tiddler=<<stateTiddler>> $index="itemtext" $value=""/>
+	<$action-setfield $tiddler=<<stateTiddler>> $index="markall"  $value=""	/><!--reset markall button-->
 	</$list>
 \end
 

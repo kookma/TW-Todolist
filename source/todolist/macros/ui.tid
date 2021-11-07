@@ -1,24 +1,24 @@
 created: 20190715170739310
-modified: 20210422161832884
+modified: 20211107174919813
 tags: $:/tags/Macro
 title: $:/plugins/kookma/todolist/macros/ui
 type: text/vnd.tiddlywiki
 
-\define td-basePath() $:/todolist/data/
+\define td-basePath() $:/todolist/data
 
 \define todolist-ui(caption:"A plain todolist", width:"100%" base:"base")
 \import [all[tiddlers+shadows]tag[$:/tags/Todolist/Macro]!has[draft.of]]
 \whitespace trim
 
 <$vars 
- nameSpace=      "$(td-basePath)$$base$"
- stateTiddler=   "$(td-basePath)$$base$/state"
- taskTiddler=    "$(td-basePath)$$base$/tasks"
- doneTiddler=    "$(td-basePath)$$base$/done"
- statusTiddler=  "$(td-basePath)$$base$/status"
- priorityTiddler="$(td-basePath)$$base$/priority"
- archiveTiddler= "$(td-basePath)$$base$/archive"	
- displayArchivedTiddler="Todolist - Archived Items - $base$"
+ nameSpace=      """$base$"""
+ stateTiddler=   """$(td-basePath)$/state/$base$"""
+ taskTiddler=    """$(td-basePath)$/tasks/$base$"""
+ doneTiddler=    """$(td-basePath)$/done/$base$"""
+ statusTiddler=  """$(td-basePath)$/status/$base$"""
+ priorityTiddler="""$(td-basePath)$/priority/$base$"""
+ archiveTiddler= """$(td-basePath)$/archive/$base$"""	
+ displayArchivedTiddler="""Todolist - Archived Items - $base$"""
 >	
 <div class="kk-todolist-ui" style="max-width:$width$;">
 
