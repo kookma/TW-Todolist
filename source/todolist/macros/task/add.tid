@@ -1,7 +1,7 @@
 created: 20190715170540482
-modified: 20211107165519251
+modified: 20211118073630581
 tags: $:/tags/Todolist/Macro
-title: $:/plugins/kookma/todolist/macros/add-task
+title: $:/plugins/kookma/todolist/macros/task/add
 type: text/vnd.tiddlywiki
 
 \define todolist-input-task()

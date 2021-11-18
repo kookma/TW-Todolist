@@ -1,7 +1,7 @@
 created: 20190715170610146
-modified: 20210422161832810
+modified: 20211118073622901
 tags: $:/tags/Todolist/Macro
-title: $:/plugins/kookma/todolist/macros/delete-task
+title: $:/plugins/kookma/todolist/macros/task/delete
 type: text/vnd.tiddlywiki
 
 \define todolist-delete-task(dataTiddler)

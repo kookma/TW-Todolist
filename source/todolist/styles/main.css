@@ -3,15 +3,6 @@
 	min-width:320px; /* controls the minimum width of whole ui */
 }
 
-.kk-todolist-ui svg{
-	fill:#aaaaaa;
-}
-
-
-.kk-todolist-ui button:hover svg {
-	fill: #888888; 
-}
-
 
 /* Todolist header ui */
 
@@ -31,7 +22,7 @@
 .kk-todolist-row{
 	display: flex;	
 	width: 100%; /* for larg screen width> 960px*/
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 
 .kk-todolist-row .kk-todolist-done,
@@ -46,16 +37,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.kk-todolist-row .kk-todolist-delete {
-	opacity: 0.3;
-}
 
 .kk-todolist-row .kk-todolist-priority{
 	margin-right:5px;
-}
-.kk-todolist-row:hover {
-	background-color: #f6f6f6;
-}
-.kk-todolist-row:hover .kk-todolist-delete {
-	opacity: 1;
 }

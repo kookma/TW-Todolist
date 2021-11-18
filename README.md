@@ -5,6 +5,8 @@ Todolist is a small [Tiddlywiki](https://tiddlywiki.com/) plugin, contain all of
 
 You can also make to-dos for major tasks like a project, a work assignment or an overall goal. Therefore, the overall purpose of creating a to-do is to remember tasks and prioritize them.
 
+# Interstitial journaling
+*Interstitial journaling* is a productivity technique created by Tony Stubblebine. It’s the simplest way to combine note-taking, tasks, and time tracking in one unique workflow (See [NessLabs](https://nesslabs.com/interstitial-journaling) ). Todolist plugin has feature for powerful interstitial journaling.
 
 # Tutorial
 * Open https://kookma.github.io/TW-Todolist/

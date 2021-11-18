@@ -1,0 +1,73 @@
+created: 20211118122926552
+modified: 20211118134051335
+tags: 
+title: $:/plugins/kookma/todolist/macros/interstitial-utility
+type: text/vnd.tiddlywiki
+
+\define todolist-input-journal()
+<$keyboard key="escape" actions=<<todolist-cancel-journal-action>>   >
+<$keyboard key="enter"  actions=<<todolist-add-journal-action>> >
+<$edit-text 
+ tiddler=<<stateTiddler>> 
+ index="itemtext" 
+ tag="input"
+ class="kk-todolist-input-textbox"
+ placeholder="add new item"
+ default="" minHeight="1em" focus="yes"
+ />
+</$keyboard> 
+</$keyboard> 
+\end
+ 
+\define todolist-add-journal()
+<$button class="tc-btn-invisible" tooltip="Add new item">
+	{{$:/core/images/new-button}}
+	<<todolist-add-journal-action>>
+</$button>
+\end
+
+\define todolist-add-journal-action()
+  <$list filter="[<stateTiddler>getindex[itemtext]!is[blank]]" variable=ignor>
+	<$set name=item value=<<now "[UTC]YYYY0MM0DD0hh0mm0ssXXX">> >
+	<$action-setfield 
+	 $tiddler=<<taskTiddler>>
+	 $index=<<item>>
+	 $value={{{ [<stateTiddler>getindex[itemtext]] }}}
+	/>
+	</$set>
+	<$action-setfield $tiddler=<<stateTiddler>> $index="itemtext" $value=""/>
+	</$list>
+\end
+
+\define todolist-cancel-journal-action()
+ <$action-setfield $tiddler=<<stateTiddler>> $index="itemtext" $value=""/>
+\end
+
+
+\define todolist-delete-journal(dataTiddler)
+<$button class="tc-btn-invisible">
+{{$:/plugins/kookma/todolist/images/times.svg}}
+<$action-setfield $tiddler=<<__dataTiddler__>> $index=<<item>> />
+</$button>
+\end
+
+\define disp-journals-in-view-mode()
+\whitespace trim
+<$list filter="[<taskTiddler>indexes[]]" variable="item">
+<div class="kk-todolist-row">
+  <div class="kk-todolist-done" style="width:2.6em"><b><$view tiddler=<<item>> field=title format=date template="0hh:0mm"/></b></div>
+  <div class="kk-todolist-desc"><<todolist-show-task>></div>
+</div>
+</$list>
+\end
+
+\define disp-journals-in-edit-mode()
+<!-- this macro is the same as disp-list-in-edit-mode -->
+<$list filter="[<taskTiddler>indexes[]]" variable="item">
+<div class="kk-todolist-row">
+  <div class="kk-todolist-done" style="width:2.6em"><b><$view tiddler=<<item>> field=title format=date template="0hh:0mm"/></b></div>
+  <div class="kk-todolist-desc"><<todolist-show-task>></div>
+  <div class="kk-todolist-delete"><$macrocall $name="todolist-delete-journal" dataTiddler=<<taskTiddler>>/></div>
+</div>
+</$list>
+\end

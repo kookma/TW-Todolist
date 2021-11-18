@@ -1,10 +1,10 @@
 created: 20190719143452217
-modified: 20211107180017426
+modified: 20211118090106860
 title: $:/plugins/kookma/todolist/macros/explore-internalTids
 type: text/vnd.tiddlywiki
 
 \define todolist-explore-data-tiddlers()
-\import $:/plugins/kookma/todolist/macros/confirm-delete
+\import [all[tiddlers+shadows]tag[$:/tags/Todolist/Macro]!has[draft.of]]
 ><b>Number of internal tiddlers found: <$count filter="[all[tiddlers+shadows]prefix<td-basePath>]" /></b><br>
 ><$macrocall $name="todolist-delete-all-tids" filter=<<dataTids>> />
 

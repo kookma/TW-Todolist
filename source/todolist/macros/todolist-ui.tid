@@ -1,10 +1,10 @@
 created: 20190715170739310
-modified: 20211107174919813
+modified: 20211118131626863
 tags: $:/tags/Macro
-title: $:/plugins/kookma/todolist/macros/ui
+title: $:/plugins/kookma/todolist/macros/todolist-ui
 type: text/vnd.tiddlywiki
 
-\define td-basePath() $:/todolist/data
+\define td-basePath()    $:/todolist/data
 
 \define todolist-ui(caption:"A plain todolist", width:"100%" base:"base")
 \import [all[tiddlers+shadows]tag[$:/tags/Todolist/Macro]!has[draft.of]]

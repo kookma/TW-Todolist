@@ -1,0 +1,30 @@
+created: 20211118083707275
+modified: 20211118112101100
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/todolist/styles/dynamic.css
+type: text/vnd.tiddlywiki
+
+/* Todolist main ui dynamic props which follow palette colors*/
+
+.kk-todolist-ui svg{
+	fill:#aaaaaa;
+}
+
+.kk-todolist-ui button:hover svg {
+	fill: #888888; 
+}
+
+
+.kk-todolist-row:hover {
+	/* background-color: #f6f6f6;*/
+	background-color: <<colour table-header-background>>;
+}
+
+
+.kk-todolist-row .kk-todolist-delete {
+	opacity: 0.3;
+}
+
+.kk-todolist-row:hover .kk-todolist-delete {
+	opacity: 1;
+}

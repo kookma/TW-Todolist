@@ -1,13 +1,15 @@
 created: 20210422161257931
-modified: 20210422170749229
+modified: 20211118142121771
 tags: 
 title: $:/plugins/kookma/todolist/readme
 type: text/vnd.tiddlywiki
 
 ; Todolist
-Todolist is a small pure wikitext plugin, contain all of the tasks that you need to complete on a given day. Todolist gives you the confidence that everything’s organized and accounted for, so you can make progress on the things that are important to you.
+Todolist is a small pure wikitext plugin, for creating todo lists and interstitial journaling. Todolist gives you the confidence that everything’s organized and accounted for, so you can make progress on the things that are important to you.
 
 You can also make to-dos for major tasks like a project, a work assignment or an overall goal. Therefore, the overall purpose of creating a to-do is to remember tasks and prioritize them.
+
+//Interstitial journaling// is a productivity technique created by Tony Stubblebine. It’s the simplest way to combine note-taking, tasks, and time tracking in one unique workflow (See [[NessLabs|https://nesslabs.com/interstitial-journaling]]).
 
 ;Code and demo
 For learning plugin features, syntax, tutorial and examples see the plugin demo and code pages
