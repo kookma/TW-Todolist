@@ -41,3 +41,10 @@
 .kk-todolist-row .kk-todolist-priority{
 	margin-right:5px;
 }
+
+/* for interstitial-journal timestamp */
+.kk-todolist-row .kk-todolist-time{
+	font-weight:bold;
+	flex-grow:0;
+	width:3.2em;
+}
