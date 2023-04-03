@@ -20,7 +20,7 @@ type: text/vnd.tiddlywiki
 >	
 <div class="kk-todolist-ui" style="max-width:$width$;">
 
-$caption$
+<$transclude tiddler=<<__caption__>> field=title mode=block/>
 
 <div class="kk-todolist-header-ui">
 <div class="kk-todolist-header-textbox"><<todolist-input-task>></div>
